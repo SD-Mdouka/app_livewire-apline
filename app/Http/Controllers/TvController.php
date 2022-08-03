@@ -18,7 +18,7 @@ class TvController extends Controller
     {
         //
       $popularTv = Http::withToken(config('services.tmdb.token'))
-            ->get('https://api.themoviedb.org/3/tv/popular')
+            ->get('https://api.themoviedb.org/3/tv/popular?api_key=497503c38549d10e74795b4ebe84b909')
             ->json()['results'];
 
         $topRatedTv = Http::withToken(config('services.tmdb.token'))
